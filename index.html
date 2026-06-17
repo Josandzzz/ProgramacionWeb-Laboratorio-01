@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio profesional — desarrollador web con enfoque en experiencias modernas y accesibles." />
+    <title>Joseph Andrés Moya Pichardo — Ingeniero de Software</title>
+
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('portafolio-tema');
+          if (!t) {
+            t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)
+              ? 'claro' : 'oscuro';
+          }
+          if (t === 'claro') {
+            document.documentElement.setAttribute('data-theme', 'claro');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__logo" href="#inicio" aria-label="Ir al inicio">TN<span aria-hidden="true">.</span></a>
+
+        <ul class="nav__menu" id="nav-menu" role="list">
+          <li><a class="nav__link" href="#inicio">Inicio</a></li>
+          <li><a class="nav__link" href="#sobre-mi">Sobre mí</a></li>
+          <li><a class="nav__link" href="#habilidades">Habilidades</a></li>
+          <li><a class="nav__link" href="#proyectos">Proyectos</a></li>
+          <li><a class="nav__link" href="#contacto">Contacto</a></li>
+        </ul>
+
+        <div class="nav__acciones">
+          <button
+            class="nav__tema"
+            type="button"
+            aria-pressed="false"
+            aria-label="Activar modo claro"
+          >
+            <span class="nav__tema-icono--oscuro" aria-hidden="true">🌙</span>
+            <span class="nav__tema-icono--claro" aria-hidden="true">☀️</span>
+          </button>
+
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-controls="nav-menu"
+            aria-expanded="false"
+            aria-label="Abrir menú de navegación"
+          >
+            <span class="nav__toggle-bar" aria-hidden="true"></span>
+            <span class="nav__toggle-bar" aria-hidden="true"></span>
+            <span class="nav__toggle-bar" aria-hidden="true"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="inicio">
+
+      <section class="hero" aria-labelledby="hero-titulo">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Ingeniero de Software</p>
+          <h1 class="hero__titulo" id="hero-titulo">
+            Hola, soy<br />
+            <span class="hero__nombre">Joseph Moya</span>
+          </h1>
+          <p class="hero__descripcion">
+            Construyo interfaces web limpias, accesibles y responsivas.
+            Me apasiona escribir código que las personas puedan usar con facilidad.
+          </p>
+          <div class="hero__ctas">
+            <a class="btn btn--primario" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn--secundario" href="#contacto">Contactarme</a>
+          </div>
+        </div>
+        <figure class="hero__imagen" aria-hidden="true">
+          <div class="hero__avatar"></div>
+        </figure>
+      </section>
+
+      <section class="sobre-mi" id="sobre-mi" aria-labelledby="sobre-mi-titulo">
+        <div class="sobre-mi__inner">
+          <header class="seccion-header">
+            <p class="seccion-header__eyebrow">Quién soy</p>
+            <h2 class="seccion-header__titulo" id="sobre-mi-titulo">Sobre mí</h2>
+          </header>
+          <div class="sobre-mi__layout">
+            <div class="sobre-mi__cuerpo">
+              <p>
+                Soy estudiante de Ingeniería en Software en la Universidad Técnica Nacional,
+                con interés en el desarrollo web frontend. Me gusta crear productos digitales
+                que combinen buen diseño con código mantenible.
+              </p>
+              <p>
+                Fuera del código, disfruto de la fotografía, la música y explorar nuevas
+                tecnologías. Busco oportunidades donde pueda seguir aprendiendo y contribuir
+                a proyectos con impacto real.
+              </p>
+            </div>
+            <aside class="sobre-mi__aside" aria-labelledby="datos-titulo">
+              <h3 class="sobre-mi__aside-titulo" id="datos-titulo">En resumen</h3>
+              <ul class="sobre-mi__datos" role="list">
+                <li>
+                  <span class="sobre-mi__etiqueta">Ubicación</span>
+                  <span>Costa Rica, Alajuela, San Carlos</span>
+                </li>
+                <li>
+                  <span class="sobre-mi__etiqueta">Carrera</span>
+                  <span>Ingeniería en Software</span>
+                </li>
+                <li>
+                  <span class="sobre-mi__etiqueta">Universidad</span>
+                  <span>UTN</span>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="habilidades" id="habilidades" aria-labelledby="habilidades-titulo">
+        <div class="habilidades__inner">
+          <header class="seccion-header">
+            <p class="seccion-header__eyebrow">Qué manejo</p>
+            <h2 class="seccion-header__titulo" id="habilidades-titulo">Habilidades</h2>
+          </header>
+          <ul class="habilidades__grid" role="list" aria-label="Lista de habilidades técnicas">
+            <li class="habilidad-card">
+              <h3 class="habilidad-card__nombre">HTML5</h3>
+              <p class="habilidad-card__desc">Estructura semántica, accesibilidad y estándares W3C.</p>
+            </li>
+            <li class="habilidad-card">
+              <h3 class="habilidad-card__nombre">CSS3</h3>
+              <p class="habilidad-card__desc">Flexbox, Grid, animaciones y diseño responsivo.</p>
+            </li>
+            <li class="habilidad-card">
+              <h3 class="habilidad-card__nombre">JavaScript</h3>
+              <p class="habilidad-card__desc">DOM, eventos, lógica del lado del cliente.</p>
+            </li>
+            <li class="habilidad-card">
+              <h3 class="habilidad-card__nombre">Git &amp; GitHub</h3>
+              <p class="habilidad-card__desc">Control de versiones, ramas y repositorios remotos.</p>
+            </li>
+            <li class="habilidad-card">
+              <h3 class="habilidad-card__nombre">Tecnico en Redes</h3>
+              <p class="habilidad-card__desc">Habilidades en configuración y mantenimiento de redes locales y empresariales.</p>
+            </li>
+            <li class="habilidad-card">
+              <h3 class="habilidad-card__nombre">Java</h3>
+              <p class="habilidad-card__desc">Programación orientada a objetos, manejo de excepciones y desarrollo de aplicaciones.</p>
+            </li>
+            <li class="habilidad-card">
+              <h3 class="habilidad-card__nombre">C++</h3>
+              <p class="habilidad-card__desc">Programación estructurada, manejo de memoria y desarrollo de aplicaciones.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="proyectos" id="proyectos" aria-labelledby="proyectos-titulo">
+        <div class="proyectos__inner">
+          <header class="seccion-header">
+            <p class="seccion-header__eyebrow">Lo que he construido</p>
+            <h2 class="seccion-header__titulo" id="proyectos-titulo">Proyectos</h2>
+          </header>
+          <ul class="proyectos__grid" role="list" aria-label="Lista de proyectos">
+
+            <li>
+              <article class="proyecto-card">
+                <figure class="proyecto-card__imagen">
+                  <img
+                    src="img/proyecto-01.svg"
+                    alt="Vista previa del proyecto Landing Page Responsiva: maqueta con un titular, texto y un botón sobre un degradado violeta"
+                    width="600"
+                    height="340"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="proyecto-card__cuerpo">
+                  <h3 class="proyecto-card__titulo">Landing Page Responsiva</h3>
+                  <p class="proyecto-card__desc">
+                    Portafolio personal construido con HTML5 semántico, CSS Grid, Flexbox
+                    y principios de accesibilidad WCAG 2.1.
+                  </p>
+                  <ul class="proyecto-card__tags" role="list" aria-label="Tecnologías usadas">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <a
+                    class="btn btn--primario"
+                    href="https://github.com/Josandzzz/ProgramacionWeb-Laboratorio-01"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Ver código fuente de Landing Page Responsiva en GitHub (abre en nueva pestaña)"
+                  >
+                    Ver en GitHub
+                  </a>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="proyecto-card">
+                <figure class="proyecto-card__imagen">
+                  <img
+                    src="img/proyecto-02.svg"
+                    alt="Vista previa del segundo proyecto: maqueta con tres tarjetas sobre un degradado turquesa"
+                    width="600"
+                    height="340"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="proyecto-card__cuerpo">
+                  <h3 class="proyecto-card__titulo">CodeLab</h3>
+                  <p class="proyecto-card__desc">
+                    Aplicacion contruida con el lenguaje de programación Java, orientada a objetos y enfocada a un servicio universitario.
+                  </p>
+                  <ul class="proyecto-card__tags" role="list" aria-label="Tecnologías usadas">
+                    <li>Java</li>
+                    <li>Orientada a Objetos</li>
+                  </ul>
+                  <a
+                    class="btn btn--primario"
+                    href="https://github.com/JDMatu/CodeLab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Ver código fuente de CodeLab en GitHub (abre en nueva pestaña)"
+                  >
+                    Ver en GitHub
+                  </a>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="proyecto-card">
+                <figure class="proyecto-card__imagen">
+                  <img
+                    src="img/proyecto-03.svg"
+                    alt="Vista previa del tercer proyecto: maqueta con un gráfico de líneas sobre un degradado naranja"
+                    width="600"
+                    height="340"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="proyecto-card__cuerpo">
+                  <h3 class="proyecto-card__titulo">Proyecto Ecosistema</h3>
+                  <p class="proyecto-card__desc">
+                    Simulacion de ecosistemas que reacciona a diversas condiciones realizado con el lenguaje de programación Java.
+                  </p>
+                  <ul class="proyecto-card__tags" role="list" aria-label="Tecnologías usadas">
+                    <li>Java</li>
+                    <li>Automatización</li>
+                  </ul>
+                  <a
+                    class="btn btn--primario"
+                    href="https://github.com/JDMatu/proyecto-ecosistema"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Ver código fuente de Proyecto Ecosistema en GitHub (abre en nueva pestaña)"
+                  >
+                    Ver en GitHub
+                  </a>
+                </div>
+              </article>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+      <section class="contacto" id="contacto" aria-labelledby="contacto-titulo">
+        <div class="contacto__inner">
+          <header class="seccion-header">
+            <p class="seccion-header__eyebrow">Hablemos</p>
+            <h2 class="seccion-header__titulo" id="contacto-titulo">Contacto</h2>
+          </header>
+          <p class="contacto__intro">
+            ¿Tienes un proyecto en mente o quieres ponerte en contacto?
+            Escríbeme y con gusto respondo.
+          </p>
+          <address class="contacto__links" aria-label="Medios de contacto">
+            <a
+              class="contacto__link"
+              href="mailto:josephmoya458@gmail.com"
+              aria-label="Enviar correo a josephmoya458@gmail.com"
+            >
+              josephmoya458@gmail.com
+            </a>
+            <a
+              class="contacto__link"
+              href="https://github.com/Josandzzz"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visitar perfil de GitHub (abre en nueva pestaña)"
+            >
+              GitHub
+            </a>
+            <a
+              class="contacto__link"
+              href="https://www.linkedin.com/in/joseph-andres-moya-pichardo-643819261/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visitar perfil de LinkedIn (abre en nueva pestaña)"
+            >
+              LinkedIn
+            </a>
+          </address>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <p>© 2026 Joseph Moya. Hecho con HTML, CSS y dedicación.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
